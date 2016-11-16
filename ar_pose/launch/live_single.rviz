@@ -6,12 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /TF1
-        - /TF1/Status1
         - /TF1/Frames1
-        - /Camera1
-      Splitter Ratio: 0.5
-    Tree Height: 239
+      Splitter Ratio: 0.543599
+    Tree Height: 510
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -56,50 +53,114 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: false
-        ar_marker:
-          Value: true
+        All Enabled: true
         ardrone_base_bottomcam:
           Value: true
         ardrone_base_frontcam:
-          Value: false
+          Value: true
         base_footprint:
-          Value: false
+          Value: true
+        base_laser:
+          Value: true
+        base_laser_mount:
+          Value: true
         base_link:
-          Value: false
-        base_stabilized:
-          Value: false
-        bottom_link:
-          Value: false
-        camera:
-          Value: false
-        front_link:
-          Value: false
-        nav:
-          Value: false
-        sonar_link:
-          Value: false
+          Value: true
+        front_bumper_link:
+          Value: true
+        front_left_wheel_link:
+          Value: true
+        front_right_wheel_link:
+          Value: true
+        imu_link:
+          Value: true
+        inertial_link:
+          Value: true
+        marker_link:
+          Value: true
+        odom:
+          Value: true
+        rear_bumper_link:
+          Value: true
+        rear_left_wheel_link:
+          Value: true
+        rear_right_wheel_link:
+          Value: true
+        top_chassis_link:
+          Value: true
+        top_plate_link:
+          Value: true
+        uav1_tf/:
+          Value: true
+        uav1_tf/base_footprint:
+          Value: true
+        uav1_tf/base_link:
+          Value: true
+        uav1_tf/base_stabilized:
+          Value: true
+        uav1_tf/bottom_link:
+          Value: true
+        uav1_tf/front_link:
+          Value: true
+        uav1_tf/odom:
+          Value: true
+        uav1_tf/sonar_link:
+          Value: true
+        user_rail_link:
+          Value: true
         world:
-          Value: false
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        nav:
-          base_footprint:
-            base_stabilized:
-              base_link:
-                bottom_link:
-                  ardrone_base_bottomcam:
-                    {}
-                front_link:
-                  ardrone_base_frontcam:
-                    ar_marker:
-                      {}
-                sonar_link:
+        odom:
+          base_link:
+            base_footprint:
+              {}
+            front_bumper_link:
+              {}
+            front_left_wheel_link:
+              {}
+            front_right_wheel_link:
+              {}
+            imu_link:
+              {}
+            inertial_link:
+              {}
+            rear_bumper_link:
+              {}
+            rear_left_wheel_link:
+              {}
+            rear_right_wheel_link:
+              {}
+            top_chassis_link:
+              {}
+            top_plate_link:
+              base_laser_mount:
+                base_laser:
                   {}
+              marker_link:
+                {}
+            user_rail_link:
+              {}
+        world:
+          uav1_tf/odom:
+            uav1_tf/:
+              {}
+            uav1_tf/base_footprint:
+              uav1_tf/base_stabilized:
+                uav1_tf/base_link:
+                  uav1_tf/bottom_link:
+                    ardrone_base_bottomcam:
+                      {}
+                  uav1_tf/front_link:
+                    ardrone_base_frontcam:
+                      {}
+                  uav1_tf/sonar_link:
+                    {}
       Update Interval: 0
       Value: true
     - Class: rviz/Camera
@@ -114,7 +175,11 @@ Visualization Manager:
       Value: true
       Visibility:
         Grid: true
+        Imu: true
         Marker: true
+        Odometry: true
+        OdometryFiltered: true
+        RobotState: true
         TF: true
         Value: true
       Zoom Factor: 1
@@ -123,13 +188,136 @@ Visualization Manager:
       Marker Topic: visualization_marker
       Name: Marker
       Namespaces:
-        basic_shapes: true
+        {}
       Queue Size: 100
+      Value: true
+    - Attached Body Color: 150; 50; 150
+      Class: moveit_rviz_plugin/RobotState
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_laser_mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_bumper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_left_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_right_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        inertial_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        marker_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rear_bumper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_left_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_right_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        top_chassis_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        top_plate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        user_rail_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotState
+      Robot Alpha: 1
+      Robot Description: /husky/robot_description
+      Robot State Topic: display_robot_state
+      Show All Links: true
+      Show Highlights: true
+      Value: true
+      Visual Enabled: true
+    - Angle Tolerance: 0.1
+      Class: rviz/Odometry
+      Color: 255; 25; 0
+      Enabled: true
+      Keep: 10000
+      Length: 0.3
+      Name: Odometry
+      Position Tolerance: 0.1
+      Topic: /husky/husky_velocity_controller/odom
+      Value: true
+    - Angle Tolerance: 0.1
+      Class: rviz/Odometry
+      Color: 85; 0; 255
+      Enabled: true
+      Keep: 10000
+      Length: 0.3
+      Name: OdometryFiltered
+      Position Tolerance: 0.1
+      Topic: /husky/odometry/filtered
+      Value: true
+    - Alpha: 1
+      Class: rviz_plugin_tutorials/Imu
+      Color: 204; 51; 204
+      Enabled: true
+      History Length: 1
+      Name: Imu
+      Topic: /imu/data
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: ardrone_base_frontcam
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -150,32 +338,32 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.73144
+      Distance: 5.85134
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.39958
-        Y: 0.238073
-        Z: 0.294196
+        X: 0.376608
+        Y: 2.33854
+        Z: 1.83889
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: -0.179602
+      Pitch: 0.320398
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.44858
+      Yaw: 2.6054
     Saved: ~
 Window Geometry:
   Camera:
     collapsed: false
   Displays:
     collapsed: false
-  Height: 684
+  Height: 1027
   Hide Left Dock: false
-  Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016a00000209fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005e00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000000410000017d000000d000fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006101000001c4000000860000001600ffffff000000010000010f00000209fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000004100000209000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000005560000003efc0100000002fb0000000800540069006d0065010000000000000556000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000002d10000020900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd00000004000000000000021d00000379fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005e00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000000280000028c000000d000fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006101000002ba000000e70000001600ffffff000000010000010f00000379fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000379000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000077e0000003efc0100000002fb0000000800540069006d006501000000000000077e000002f600fffffffb0000000800540069006d006501000000000000045000000000000000000000055b0000037900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -183,7 +371,7 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: false
-  Width: 1366
-  X: 0
-  Y: 29
+    collapsed: true
+  Width: 1918
+  X: -10
+  Y: 14
